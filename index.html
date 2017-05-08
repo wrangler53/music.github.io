@@ -1,80 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <title>Photo Gallery</title>
+	<title>
+		
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
 </head>
 <body>
-<header class="container-fluid">
-  	<div class="row">
-    	<nav class="navbar navbar-inverse">
-    		<div class="container">
-    			<div class="navbar-header">
-    				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
-    					<span class="icon-bar"></span>
-    					<span class="icon-bar"></span>
-    					<span class="icon-bar"></span>
-    				</button>
-    				<a class="navbar-brand" href="index.html"><img src="img/headerLogo.png"></a>
-    			</div>
-    			<div class="collapse navbar-collapse" id="mainMenu">
-    				<ul class="nav navbar-nav mainMenu">
-    					<li><a href="#" class="activeMenu"><i class="fa fa-home"></i>Главная</a></li>
-    					<li><a href="gallery.html"><i class="fa fa-picture-o"></i>Галерея</a></li>
-    					<li><a href="about.html"><i class="fa fa-info-circle"></i>О нас</a></li>
-    				</ul>
-    			</div>
-    		</div>
-    	</nav>
-    </div>
-  </header>
 
-	<div id="title">Slider Photo Gallery</div>
-<main class="container-fluid mainSlider">
-    <div class="row">
-	<div class="col-md-1">
-	<a href='#myCarousel' data-slide='prev' title="Previous slide"><i class='fa fa-chevron-circle-left'></i></a>
-	</div>
-	<div class="col-md-10">
- 
-        <div class="well-none">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            </div>
-            <!--/myCarousel-->
-        </div>
-        <!--/well-->
-    </div>
-	<div class="col-md-1">
-	<a href='#myCarousel' data-slide='next' title="Next slide"><i class='fa fa-chevron-circle-right'></i></a>
-	</div>
-	</div>
-</main>
+	<script>
+		$(document).ready(function(){    
+    		$('.modal').modal();
+  		});
+	</script>
 
-	<div id="myModal" class="modal fade sw" role="dialog">
-	  <div class="modal-dialog modal-lg">
+	<script>
+		function getFile(id){
+		$.ajax({
+		    type: "GET",
+		    url: "js/info.json",
+		    dataType: "json",
+		    success: function(response){
+		    	alert("OK")
+		    },
+		    error: alert("Not OK")
 
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title"></h4>
-	      </div>
-	      <div class="modal-body">
-	      	<img src="#">
-	        <p></p>
-	      </div>
-	    </div>
-	  </div>
+		    //editModal(response)
+		  });
+		}
+		function editModal(response, id){
+			$(".info").attr("val", response.images[id].url);
+		}
+	</script>
+
+	<header>
+		<img src="img/logo.png">
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image">
+							<a href="#modal1" onclick="getFile(1)"><img src="img/rhcp.png"></a>
+						</div>
+					</div>
+				</div>
+				<div id="modal1" class="modal modal-fixed-footer">
+					<div class="modal-content">
+						<img src="img/rhcp.png">
+						<span class="info"></span>
+					</div>
+					<div class="modal-footer">
+						<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+					</div>
+				</div>
+
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image">
+							<a href="#modal1" onclick="getFile(2)"><img src="img/rhcp.png"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image">
+							<a href="#modal1" onclick="getFile(3)"><img src="img/rhcp.png"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image">
+							<a href="#modal1" onclick="getFile(4)"><img src="img/rhcp.png"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image">
+							<a href="#modal1" onclick="getFile(5)"><img src="img/rhcp.png"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image">
+							<a href="#modal1" onclick="getFile(6)"><img src="img/rhcp.png"></a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</main>
+
+	<div class="footer-copyright">
+		<div class="container">
+			© 2017 Copyright Text
+			<a class="grey-text text-lighten-4 right" href="#!">by Intelligence Cage</a>
+		</div>
 	</div>
-	<footer class="navbar-fixed-bottom row-fluid">Artur Novodranov, Group IK-41</footer>
-    
-	<script src="scripts/jquery-3.1.1.min.js"></script>
-    <script src="scripts/scriptSlider.js"></script>
-    <script src="scripts/bootstrap.js"></script>
 </body>
 </html>
