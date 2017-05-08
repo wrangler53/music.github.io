@@ -18,22 +18,16 @@
 
 	<script>
 		$(document).ready(function(){    
-    		$('.modal').modal();
-  		});
+			$('.modal').modal();
+		});
 	</script>
 
 	<script>
-		$.ajax({
-            url: "js/info.json",
-            type: "GET",
-            success: function (responce) {
-                alert('OK');
-
-            },
-            error: function (responce) {
-                alert('Not OK');
-            }
-        });
+		$(function(){
+			$.getJSON('info.json', function(data) {
+				alert('ITs ok');
+			});
+		});
 	</script>
 
 	<header>
