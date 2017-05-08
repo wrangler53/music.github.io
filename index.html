@@ -23,22 +23,17 @@
 	</script>
 
 	<script>
-		function getFile(id){
 		$.ajax({
-		    type: "GET",
-		    url: "js/info.json",
-		    dataType: "json",
-		    success: function(response){
-		    	alert("OK")
-		    },
-		    error: alert("Not OK")
+            url: "js/info.json",
+            type: "GET",
+            success: function (responce) {
+                alert('OK');
 
-		    //editModal(response)
-		  });
-		}
-		function editModal(response, id){
-			$(".info").attr("val", response.images[id].url);
-		}
+            },
+            error: function (responce) {
+                alert('Not OK');
+            }
+        });
 	</script>
 
 	<header>
