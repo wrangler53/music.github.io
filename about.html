@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <header class="container-fluid">
+  	<div class="row">
+    	<nav class="navbar navbar-inverse">
+    		<div class="container">
+    			<div class="navbar-header">
+    				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+    					<span class="icon-bar"></span>
+    					<span class="icon-bar"></span>
+    					<span class="icon-bar"></span>
+    				</button>
+    				<a class="navbar-brand" href="index.html"><img src="img/headerLogo.png"></a>
+    			</div>
+    			<div class="collapse navbar-collapse" id="mainMenu">
+    				<ul class="nav navbar-nav mainMenu">
+    					<li><a href="index.html"><i class="fa fa-home"></i>Главная</a></li>
+						<li><a href="gallery.html"><i class="fa fa-picture-o"></i>Галерея</a></li>
+    					<li><a href="#" class="activeMenu"><i class="fa fa-info-circle"></i>О нас</a></li>
+    				</ul>
+    			</div>
+    		</div>
+    	</nav>
+    </div>
+  </header>
+  <main class="container">
+  <span></span>
+  	<div id="title">О нас</div>
+  	<div class="row text-center">
+  		<div class="col-lg-3 col-md-3 col-sm-12"><img src="img/about-us.jpg"></div>
+  		<div class="col-lg-9 col-md-9 col-sm-12">
+  			<p class="text-left">
+  				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris urna odio, tristique eget accumsan vel, efficitur id purus. Phasellus consectetur justo at consequat feugiat. Integer eu enim auctor, porta dui non, molestie quam. Integer in metus id lorem feugiat tempus et sit amet dolor. Nam justo enim, sodales ut dignissim sed, rutrum eu sem. Etiam consectetur iaculis risus quis laoreet. Quisque fermentum, mi vel ultrices luctus, mauris ex facilisis nisi, id lacinia felis arcu vel odio. Sed vel enim eu justo aliquet viverra. Quisque mattis dapibus nisl, id commodo quam pellentesque ac. Nulla molestie aliquet justo vitae tincidunt. Aliquam egestas nulla nec odio laoreet, a consequat nibh accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam placerat leo eget condimentum laoreet. Pellentesque libero nulla, mattis at lacus pulvinar, egestas porttitor magna. Ut et sapien venenatis, rutrum urna in, placerat mi. Mauris libero metus, bibendum in. 
+  			</p>
+  		</div>
+  	</div>
+  	<div class="row">
+  		<h2 class="text-center">Закажите наши услуги</h2>
+      <div class="col-lg-12">
+        <form action="server.php" role="form" method="POST">
+            <div class="form-group" id="firstInput">
+            <label for="firstName" class="control-label">Ваше имя</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Имя" required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block" id="helpBlock1"></div>
+          </div>
+          <div class="form-group" id="secondInput">
+            <label for="secondName" class="control-label">Ваша фамилия</label>
+            <input type="text" class="form-control" id="secondName" placeholder="Фамилия" required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block" id="helpBlock2"></div>
+          </div>
+            <div class="form-group" id="thirdInput">
+            <label for="email" class="control-label">Ваш e-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="example@test.com" required>
+            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div class="help-block" id="helpBlock3"></div>
+          </div>
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="" id="checkbox1" checked>
+              Дополнительня услуга 1
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="" id="checkbox2">
+              Дополнительня услуга 2
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="radio">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              Обычный статус
+            </label>
+          </div>
+          <div class="radio disabled" id="radioPremium">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" disabled="disabled">
+              Премиум статус!
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email" class="control-label">Срок действия услуги</label>
+          <select class="form-control">
+            <option>День</option>
+            <option>Неделя</option>
+            <option>Месяц</option>
+            <option>6 месяцев</option>
+            <option>Год</option>
+          </select>
+        </div>
+        <div class="form-group text-center"><button type="submit" class="btn btn-success btn-lg">Заказать</button></div>
+        </form>
+      </div>
+  	</div>
+  	<footer class="navbar-fixed-bottom row-fluid">Artur Novodranov, Group IK-41</footer>
+    
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/form.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+  </body>
+</html>

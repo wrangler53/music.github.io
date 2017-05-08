@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Photo Gallery</title>
+</head>
+<body>
+<header class="container-fluid">
+  	<div class="row">
+    	<nav class="navbar navbar-inverse">
+    		<div class="container">
+    			<div class="navbar-header">
+    				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+    					<span class="icon-bar"></span>
+    					<span class="icon-bar"></span>
+    					<span class="icon-bar"></span>
+    				</button>
+    				<a class="navbar-brand" href="index.html"><img src="img/headerLogo.png"></a>
+    			</div>
+    			<div class="collapse navbar-collapse" id="mainMenu">
+    				<ul class="nav navbar-nav mainMenu">
+    					<li><a href="index.html"><i class="fa fa-home"></i>Главная</a></li>
+    					<li><a href="#" class="activeMenu"><i class="fa fa-picture-o"></i>Галерея</a></li>
+    					<li><a href="about.html"><i class="fa fa-info-circle"></i>О нас</a></li>
+    				</ul>
+    			</div>
+    		</div>
+    	</nav>
+    </div>
+  </header>
+  	<main>
+	<div id="title">Photo Gallery</div>
+	    <div class="container">
+	    	<div class="row lib" id="0">
+		    	<!--  Library -->
+		    </div>
+		    <nav class="text-center pagMenu">
+		      <ul class="pagination">
+		       	<!--  Pagination -->
+		      </ul>
+		    </nav>
+	    </div>
+  	</main>
+  	<br>
+ <footer class="navbar-fixed-bottom row-fluid">Artur Novodranov, Group IK-41</footer>
+	
+	<div id="myModal" class="modal fade sw" role="dialog">
+	  <div class="modal-dialog modal-lg">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" title="Закрыть" data-dismiss="modal"><i class="glyphicon glyphicon-remove-circle"></i></button>
+	        <h4></h4>
+	      </div>
+	      <div class="modal-body">
+	      	<img src="#">
+	        <p></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+</body>
+</html>
